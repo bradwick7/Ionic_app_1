@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title> Card Carousel </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="container"></div>
+  <ion-slides pager="false">
+    <ion-slide *ngFor="let photo of photos">
+      <ion-card>
+        <img [src]="photo.url" />
+        <ion-card-header>
+          <ion-card-title>{{photo.name}}</ion-card-title>
+          <ion-card-content>{{photo.text}}</ion-card-content>
+        </ion-card-header>
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
